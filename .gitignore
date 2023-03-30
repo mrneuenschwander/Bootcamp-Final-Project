@@ -1,0 +1,8 @@
+# Ignore some files.
+
+Archive.zip
+data_review.ipynb
+mvp_votings.csv
+NBA_Stats_202223_All_Stats_NBA_Player_Props_Tool.csv
+ranking.csv
+test_data.csv
