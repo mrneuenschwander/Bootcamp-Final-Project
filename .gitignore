@@ -1,2 +1,10 @@
 
+# Ignore some files.
+
+data_review.ipynb
+mvp_votings.csv
+ranking.csv
+test_data.csv
+
 .DS_Store
+
