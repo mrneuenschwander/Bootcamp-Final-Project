@@ -1,9 +1,9 @@
 # Bootcamp-Final-Project
-Authors:
+Authors:<br>
     Mitch Neuenschwander<br>
     Andy Kawamoto<br>
     Kelvin Molina<br>
-    Grayson W-idontknowyourlastname
+    Grayson W-idontknowyourlastname<br>
 
 ## Deliverable 1: EDA and choosing a topic.
 
@@ -17,4 +17,4 @@ We decided on a "rubberband" approach, where we started in Python, moved it to S
 This is the first "real" dataset that we have worked with, in that it is raw and unedited by the Bootcamp Curriculum. It's nice to see the methods we've learned being applied in a "real-world" situation, and knowing it works without a starter code or a framework already in place.
 
 #### Database
-We used pgAdmin as our database program and created 4 tables - clean_games, clean_games_details, clean_ranking, and players - to hold the data.  
+We used pgAdmin as our database program and created 4 tables - clean_games, clean_games_details, clean_ranking, and players - to hold the data. At first, extra columns needed to be removed as they were not lining up with the generated schema. Steps were taken to address this, as mentioned above. Once the CSV's are formatted correctly, they will drop into place without conflicts and we can begin the SQL transformation process.
