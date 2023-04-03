@@ -1,8 +1,8 @@
 # Bootcamp-Final-Project
 Authors:
-    Mitch Neuenschwander
-    Andy Kawamoto
-    Kelvin Molina
+    Mitch Neuenschwander<br>
+    Andy Kawamoto<br>
+    Kelvin Molina<br>
     Grayson W-idontknowyourlastname
 
 ## Deliverable 1: EDA and choosing a topic.
