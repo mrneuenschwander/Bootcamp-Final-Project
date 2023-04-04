@@ -2,8 +2,6 @@
 # Ignore some files.
 
 data_review.ipynb
-mvp_votings.csv
-test_data.csv
 
 .DS_Store
 
