@@ -3,7 +3,7 @@ Authors:<br>
     Mitch Neuenschwander<br>
     Andy Kawamoto<br>
     Kelvin Molina<br>
-    Grayson W-idontknowyourlastname<br>
+    Grayson Workman<br>
 
 ## Deliverable 1: EDA Deep Dives, And Choosing A Topic.
 
