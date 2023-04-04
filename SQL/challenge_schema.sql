@@ -1,8 +1,9 @@
--- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
 
 CREATE TABLE "ranking" (
+    "INDEX" int   NOT NULL,
     "TEAM_ID" int   NOT NULL,
     "CONFERENCE" varchar(50)   NOT NULL,
     "TEAM" varchar(50)   NOT NULL,
@@ -12,7 +13,7 @@ CREATE TABLE "ranking" (
     "W_PCT" float   NOT NULL,
     "DATE" date   NOT NULL,
     CONSTRAINT "pk_ranking" PRIMARY KEY (
-        "TEAM_ID"
+        "INDEX"
      )
 );
 
@@ -37,8 +38,9 @@ CREATE TABLE "game_details" (
     "BLK" float   NOT NULL,
     "TO" float   NOT NULL,
     "PTS" float   NOT NULL,
+    "UNIQUE_ID" varchar(100)   NOT NULL,
     CONSTRAINT "pk_game_details" PRIMARY KEY (
-        "GAME_ID"
+        "UNIQUE_ID"
      )
 );
 
@@ -64,7 +66,7 @@ CREATE TABLE "games" (
     "REB_away" float   NOT NULL,
     "HOME_TEAM_WINS" int   NOT NULL,
     CONSTRAINT "pk_games" PRIMARY KEY (
-        "SEASON"
+        "GAME_ID"
      )
 );
 
@@ -72,9 +74,9 @@ CREATE TABLE "players" (
     "PLAYER_NAME" VARCHAR(50)   NOT NULL,
     "TEAM_ID" int   NOT NULL,
     "PLAYER_ID" int   NOT NULL,
-    "SEASON" period   NOT NULL,
+    "SEASON" date   NOT NULL,
     CONSTRAINT "pk_players" PRIMARY KEY (
-        "PLAYER_NAME"
+        "PLAYER_ID"
      )
 );
 
