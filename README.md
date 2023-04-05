@@ -19,7 +19,16 @@ Ultimately, it is a good excersize in understanding that even though work looks 
 #### Database
 The work around the database highlighted the difficulty in the data cleanup steps prior to using a machine learning model.  We had to address duplicates, nulls, non-unique values, columns with mixed datatypes, or datatypes that didn't seem to line up well from Python to SQL.  There was a lot of work around determine which data or time information we needed and how to format it correctly.  
 
-We used pgAdmin as our database program and quickdatabase.com as our ERD generator.  There was a lot of troublshooting that had to be researched based on the error codes displayed in when either creating the tables or when uploading the data into the table.   We created 4 tables for our data - games, games_details, teams, and player, but we decided we only needed to connect games, game_details, and teams.  
+We used pgAdmin as our database program and quickdatabase.com as our ERD generator.  There was a lot of troublshooting that had to be researched based on the error codes displayed when either creating the tables or when uploading the data into the table. Error codes such as:
+![sql_error](resources/photos/sql_error.png)  
 
-At first, extra columns needed to be removed as they were not lining up with the generated schema. Steps were taken to address this, as mentioned above. The biggest hurdle was to find unique columns or Primary Keys to link the table together.  As a group we had to decide which information was important for our model, and as a result modified the ranking.csv to a teams.csv which listed the teams in the NBA. We also decided that the players.csv will be cross referenced after the machine learning model determines which players are in contention for the MVP based on their player_ID number.   We then had to modify the SQL code and the CSV's so they matched appropriately and were able to successfully load our data into the database with appropraitely connected tables.   
+We created 4 tables for our data:
+* games
+* games_details
+* teams
+* player 
+
+We decided we only needed to connect **games, game_details,** and **teams**.  
+
+At first, extra columns needed to be removed as they were not lining up with the generated schema. Steps were taken to address this, as mentioned above. The biggest hurdle was to find unique columns or Primary Keys to link the table together, so composite primary keys were created. As a group we had to decide which information was important for our model, and as a result modified the **ranking.csv** to a **teams.csv** which listed the teams in the NBA. We also decided that the **players.csv** will be cross referenced after the machine learning model determines which players are in contention for the MVP based on their player_ID number.   We then had to modify the SQL code and the CSV's so they matched appropriately and were able to successfully load our data into the database with appropraitely connected tables.   
 
