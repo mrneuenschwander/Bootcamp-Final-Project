@@ -30,5 +30,51 @@ We created 4 tables for our data:
 
 We decided we only needed to connect **games, game_details,** and **teams**.  
 
-At first, extra columns needed to be removed as they were not lining up with the generated schema. Steps were taken to address this, as mentioned above. The biggest hurdle was to find unique columns or Primary Keys to link the table together, so composite primary keys were created. As a group we had to decide which information was important for our model, and as a result modified the **ranking.csv** to a **teams.csv** which listed the teams in the NBA. We also decided that the **players.csv** will be cross referenced after the machine learning model determines which players are in contention for the MVP based on their player_ID number.   We then had to modify the SQL code and the CSV's so they matched appropriately and were able to successfully load our data into the database with appropraitely connected tables.   
+At first, extra columns needed to be removed as they were not lining up with the generated schema. Steps were taken to address this, as mentioned above. The biggest hurdle was to find unique columns or Primary Keys to link the table together, so composite primary keys were created. As a group we had to decide which information was important for our model, and as a result modified the **ranking.csv** to a **teams.csv** which listed the teams in the NBA. We also decided that the **players.csv** will be cross referenced after the machine learning model determines which players are in contention for the MVP based on their player_ID number.   We then had to modify the SQL code and the CSV's so they matched appropriately and were able to successfully load our data into the database with appropraitely connected tables. 
+
+Once the database was fully operational, it was time to disect each table and extract the important columns from each table and join them into a completely new table, which brought new obstacles for our team. Some of the column names in the tables were also function keys, so to correct this issue, we decided to put all of the column titles in quotes(" "). To get all of the columns we wanted, we joined the tables with a regular join between them so none of the data was lost or duplicated. We pushed all of the columns into a new table named **nba_info**. Here is a look into the SQL query used to create the new table.
+```
+SELECT "GAME_ID", "TEAM_ID", "PLAYER_ID", "PLAYER_NAME", 
+"MIN", "FGM", "FGA", "FG_PCT", "FG3M", 
+"FG3A", "FG3_PCT", "FTM", "FTA", "FT_PCT", 
+"REB", "AST", "STL", "BLK", "TO", "PTS"
+INTO nba_details2
+FROM game_details; 
+
+SELECT  gm."GAME_DATE_EST", gm."GAME_ID", gm."HOME_TEAM_ID",
+    gm."VISITOR_TEAM_ID", gm."SEASON", gm."TEAM_ID_home", 
+    gm."HOME_TEAM_WINS",tm."TEAM_ID", tm."CONFERENCE", tm."TEAM",
+	nd."PLAYER_ID", nd."PLAYER_NAME", 
+nd."MIN", nd."FGM", nd."FGA", nd."FG_PCT", nd."FG3M", 
+nd."FG3A", nd."FG3_PCT", nd."FTM", nd."FTA", nd."FT_PCT", 
+nd."REB", nd."AST", nd."STL", nd."BLK", nd."TO", nd."PTS"
+INTO nba_info
+FROM games as gm
+JOIN nba_details2 as nd
+ON gm."GAME_ID" = nd."GAME_ID"
+join teams as tm 
+on tm."TEAM_ID" = nd."TEAM_ID"
+```
+
+We could have pulled all of the tables directly from Pgadmin using Python by writing code like the following:
+```
+import psycopg2
+import requests
+
+conn = psycopg2.connect(
+            host = "localhost",
+            database = "final_project",
+            user = "postgres",
+            password = "****")
+
+cur = conn.cursor()
+
+nba_data = cur.execute("select * from nba_info")
+
+nba_data = cur.fetchall()
+
+print(nba_data)
+```
+but with multiple people working on this project, we decided to transfer the new table into a .csv file so it may be accessible for everyone without creating a Postgres database.
+
 
