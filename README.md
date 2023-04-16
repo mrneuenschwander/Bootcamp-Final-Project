@@ -78,3 +78,5 @@ print(nba_data)
 but with multiple people working on this project, we decided to transfer the new table into a .csv file so it may be accessible for everyone without creating a Postgres database.
 
 
+### Tableau
+https://public.tableau.com/app/profile/grayson.w./viz/NBA_MVP_UofUDS/NBAMVPBreakdown?publish=yes
