@@ -98,13 +98,8 @@ After many attempts, we finally had to admit that all of our machine learning mo
 
 Tableau came with different challenges. The value in tableau came from trying to represent the data in a matter that is appealing to our viewers. Trying to get our story accross was difficult and we needed to create many different attempts. Placing tables in the rows section, then moving them to the columns. Finding out neither option worked, and then trying different charts. Other issues were trying to make visuals look appealing. Trying to add backgrounds was not as easy as it sounds when using Tableau.
 
-
 ### Tableau
 https://public.tableau.com/app/profile/grayson.w./viz/NBA_MVP_UofUDS/NBAMVPBreakdown?publish=yes Contains our heat maps and provides a visual representation of our analysis, highlighting the variations in statistical performance across different players and eras. Utilizing the heat maps, we were able to identify trends and patterns in player performance, and explore the differences in statistical performance between players from different eras. Overall, the Tableau link is an important component of our project, enabling us to showcase our work and communicate our findings effectively.
-
-
-rules change
-the old players still hold up very well compared to the current modern style players where it is all very offensively driven
 
 ### Conclusion 
 After analyzing NBA stats from 1980 to 2018, we have concluded that predicting the regular season MVP based solely on stats and historical data is not feasible. Our research revealed that the task is complicated by numerous variables, such as changes in the league rules and the evolving offensive style of the game, that can significantly affect players' performance and MVP candidacy.
