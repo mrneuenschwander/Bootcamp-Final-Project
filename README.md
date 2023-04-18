@@ -75,8 +75,13 @@ nba_data = cur.fetchall()
 
 print(nba_data)
 ```
-but with multiple people working on this project, we decided to transfer the new table into a .csv file so it may be accessible for everyone without creating a Postgres database.
+but with multiple people working on this project, we decided to transfer the new table into a .csv file so it may be accessible for everyone without creating a Postgres database for each member.
 
 
 ### Tableau
 https://public.tableau.com/app/profile/grayson.w./viz/NBA_MVP_UofUDS/NBAMVPBreakdown?publish=yes
+
+
+### Challenges
+Clearly no one expected this entire analysis to go smoothly without any challenges. From the start, the journey to find the right data that will work for our analysis. We looked at web scraping options, other sports sites that provided documentation. We chose data from Kaggle. Although we chose the best data, from the beginning we learned that we needed to modify all of our data and remove columns and then create new columns. Then new errors would arise trying to upload the data into postgres. We had constant and ongoing EDA. EDA never ends as you learn more about your data as you go. 
+ and learning that our model doesnt work. Test train split doesnt work. 
