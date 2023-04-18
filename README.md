@@ -99,11 +99,18 @@ After many attempts, we finally had to admit that all of our machine learning mo
 Tableau came with different challenges. The value in tableau came from trying to represent the data in a matter that is appealing to our viewers. Trying to get our story accross was difficult and we needed to create many different attempts. Placing tables in the rows section, then moving them to the columns. Finding out neither option worked, and then trying different charts. Other issues were trying to make visuals look appealing. Trying to add backgrounds was not as easy as it sounds when using Tableau.
 
 
- ### Tableau
-https://public.tableau.com/app/profile/grayson.w./viz/NBA_MVP_UofUDS/NBAMVPBreakdown?publish=yes
+### Tableau
+https://public.tableau.com/app/profile/grayson.w./viz/NBA_MVP_UofUDS/NBAMVPBreakdown?publish=yes Tableau link to our results of the heat maps. This is a great way for us to show our work and the difference in stats from different players and how they stack up to others.
 
 
 rules change
 the old players still hold up very well compared to the current modern style players where it is all very offensively driven
 
 ### Conclusion 
+After analyzing NBA stats from 1980 to 2018, we have concluded that predicting the regular season MVP based solely on stats and historical data is not feasible. Our research revealed that the task is complicated by numerous variables, such as changes in the league rules and the evolving offensive style of the game, that can significantly affect players' performance and MVP candidacy.
+
+One of our key findings is that comparing players from different eras is challenging but revealing. For example, Michael Jordan stacked up favorably against players like Kobe and LeBron, who played in a more offensively favored game era. However, even when we limited our analysis to a set of "important factors" stats, the amount of data was insufficient for machine learning to predict future MVP picks accurately.
+
+Furthermore, we recognize that we did not consider the politics of the game, a critical aspect of MVP selection that involves fans and critics. We left this aspect of the MVP pick out as it was something that we can not predict at all and isnt measurable.
+
+In conclusion, our research highlights the complexity of predicting regular season MVP picks and underscores the importance of considering multiple factors, including game era, league rules, and the politics of the game. While our current set of skills, data, and timeframe did not allow us to predict future MVP picks accurately, we hope our research provides a foundation for further exploration of this fascinating and ever-changing topic.
