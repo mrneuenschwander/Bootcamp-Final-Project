@@ -7,6 +7,8 @@ Authors:<br>
 
 ## Deliverable 1: EDA Deep Dives, And Choosing A Topic.
 ### Introduction
+Since the project started around the end of the NCAA men’s basketball final four and the difficulty in predicting the brackets results, our team started with exploring ideas around sports and predicting any sort of outcome using machine learning.    We first discussed things like fantasy football, or sport book betting, but knowing how extremely difficult that is given it can’t be done now, we landed on something we thought was more manageable.  Since the MVP is determined by votes, we decided on predicting the top 5 NBA regular season MVP candidates, because we believed that it was reasonable that the top names would have the best stats.  Given the extensive data that is collected on each player in the NBA over the last 23 years, we believed we would have enough data to predict with some certainty that 1 of the 5 names picked would be the NBA MVP.  
+
 HYPOTHESIS
 Our null hypothesis is “Using only game stats of each NBA player, it is not possible to determine the Most Valuable Player (MVP).  Our alternative hypothesis is with Machine Learning, the Most Valuable Player (MVP) of the NBA can be predicted using the game stats of each player over the course of the regular season.”  In addition, our goal was to see if we could do it at a different point of the season such as the, trade deadline in February.  
 DATA gathering
