@@ -100,7 +100,7 @@ Tableau came with different challenges. The value in tableau came from trying to
 
 
 ### Tableau
-https://public.tableau.com/app/profile/grayson.w./viz/NBA_MVP_UofUDS/NBAMVPBreakdown?publish=yes Tableau link to our results of the heat maps. This is a great way for us to show our work and the difference in stats from different players and how they stack up to others.
+https://public.tableau.com/app/profile/grayson.w./viz/NBA_MVP_UofUDS/NBAMVPBreakdown?publish=yes Contains our heat maps and provides a visual representation of our analysis, highlighting the variations in statistical performance across different players and eras. Utilizing the heat maps, we were able to identify trends and patterns in player performance, and explore the differences in statistical performance between players from different eras. Overall, the Tableau link is an important component of our project, enabling us to showcase our work and communicate our findings effectively.
 
 
 rules change
