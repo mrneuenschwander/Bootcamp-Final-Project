@@ -6,6 +6,11 @@ Authors:<br>
     Grayson Workman<br>
 
 ## Deliverable 1: EDA Deep Dives, And Choosing A Topic.
+### Introduction
+HYPOTHESIS
+Our null hypothesis is “Using only game stats of each NBA player, it is not possible to determine the Most Valuable Player (MVP).  Our alternative hypothesis is with Machine Learning, the Most Valuable Player (MVP) of the NBA can be predicted using the game stats of each player over the course of the regular season.”  In addition, our goal was to see if we could do it at a different point of the season such as the, trade deadline in February.  
+DATA gathering
+Google, Kaggle, NBA Stuffer, and ESPN, were the primary places we looked for data.  We wanted as much information as possible and started what we considered the “modern NBA” which was the 1980-1981 season.   We were able to find 5 data sets which contained all the data we thought we would need.
 
 ### Week 1
 The first Deliverable of the Final Challenge is straightforward. The goal was to decide on a question, find a dataset that would allow us to answer it effectively, and begin manipulation and prototype modeling of that set. 
@@ -77,11 +82,28 @@ print(nba_data)
 ```
 but with multiple people working on this project, we decided to transfer the new table into a .csv file so it may be accessible for everyone without creating a Postgres database for each member.
 
+### Machine Learning
+The machine learning section was the most anticipated and yet anti-climactic section of the project to date. We had assumed that the model would be based off the [award_share] column in mvp_voting.csv, and that would allow porting of the model to the Global NBA info, but quickly determined that we were missing the same award_share column from nba_data.csv, which was the ultimate goal; to determine an NBA MVP using the preestablished MVP info from the NBA datasheet containing all players. 
 
-### Tableau
+The first and greatest issue was the model type. We had started initially targeting a supervised model, but during further EDA discovered we didn't *really* have a target column, as is required by a supervised model. We attempted to address this issue by creating a KMeans model and adding a cluster designation for each player, which worked, but in turn raised a host of other questions. For instance, how were the players clustered out? Which stats were most important when compared to a group pool? Which seasons had the most chances of winning an MVP, per stat tracked? All of these, along with a limited knowledge of Machine Models and networks, were enough to put the kybosh on creating a workable model.
+
+We started with a RandomForestClassifier, and split the data into its respective training and testing sets. This mostly went off without a hitch, but as soon as we attempted to load the model we discovered that the data type was not going to work with the model. Specifically, the data was classed as 'continuous' when it needed to be 'discrete'. In layman's terms, the count never ended. There was not a set start or end point for the data, and this made it so the model (which classifies based on 'yes' or 'no' answers) was not able to be run. With that in mind, we shifted to a Deep Learning Network.
+
+It is not reflected in the NN_Bootcamp_Challenge.ipynb itself, but we tried multiple configurations of neurons and layers, all of which led to the same result: 0% Accuracy, and roughly a ~30% data loss. The initial model performed the best, but at a 0% accuracy across the board can that be considered 'better'? At the end of it all, we have determined that we do not have enough data to determine a candidate pool. The greatest roadblock here concerns simply more enigmatic data, such as league politics, player perception across a season, on and off court actions, and voting momentum based on the above. 
+
+### Challenges
+Clearly no one expected this entire analysis to go smoothly without any challenges. From the start, the journey to find the right data that will work for our analysis. We looked at web scraping options, other sports sites that provided documentation. We chose data from Kaggle. Although we chose the best data, from the beginning we learned that we needed to modify all of our data and remove columns and then create new columns. Then new errors would arise trying to upload the data into postgres. While trying to build the ERD the foreign keys would not link with each other accross all of the tables. Preprocessing the tables took the bulk of our time during this project. We had constant and ongoing EDA. EDA never ends as you learn more about your data as you go. The machine learning model was especially difficult. We tried multiple models like unsupervised, supervised and even a neural Network machine learning. Our Test train split wouldn't work, the "target"column was tricky because MVP is won by votes, so it was difficult to name one stat to be the value that determines MVP.
+
+After many attempts, we finally had to admit that all of our machine learning models did not work. This was the biggest hurdle to overcome because we felt defeated that after that much effort, our test results showed us a 0% accuracy. We needed to regroup and find another way to provide helpful information. 
+
+Tableau came with different challenges. The value in tableau came from trying to represent the data in a matter that is appealing to our viewers. Trying to get our story accross was difficult and we needed to create many different attempts. Placing tables in the rows section, then moving them to the columns. Finding out neither option worked, and then trying different charts. Other issues were trying to make visuals look appealing. Trying to add backgrounds was not as easy as it sounds when using Tableau.
+
+
+ ### Tableau
 https://public.tableau.com/app/profile/grayson.w./viz/NBA_MVP_UofUDS/NBAMVPBreakdown?publish=yes
 
 
-### Challenges
-Clearly no one expected this entire analysis to go smoothly without any challenges. From the start, the journey to find the right data that will work for our analysis. We looked at web scraping options, other sports sites that provided documentation. We chose data from Kaggle. Although we chose the best data, from the beginning we learned that we needed to modify all of our data and remove columns and then create new columns. Then new errors would arise trying to upload the data into postgres. We had constant and ongoing EDA. EDA never ends as you learn more about your data as you go. 
- and learning that our model doesnt work. Test train split doesnt work. 
+rules change
+the old players still hold up very well compared to the current modern style players where it is all very offensively driven
+
+### Conclusion 
