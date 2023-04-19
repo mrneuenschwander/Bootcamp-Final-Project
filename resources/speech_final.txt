@@ -1,0 +1,22 @@
+Preprocessing definitely took up the bulk of our time for the project. in my opinion, The work around building the database was the most difficult and head scratching. We had to address duplicates, null vallues, non-unique values, columns with mixed datatypes and more.
+
+We used Pgadmin SQL as our database hub and used quickdatabase.com to build our ERD and schema. We uploaded 4 tables to our database: 
+games, games_details, teams, and players [show pgadmin image]
+Here is an image of our successful pgadmin tables.
+[show ERD]
+and here is what our ERD looks like. you can see how we linked the tables using foreign keys and looking in the corner, the code shows no errors. [show other erd's]
+Here are some of our other failed ERD's.
+  we created multiple versions of this ERD because we could not join the tables in postgres even though we were getting the "no errors found" at the bottom of the code.
+
+again, we had more issues to deal with. trying to Join the tables to each other, We came accross multiple issue's like this:[show error image]
+what this error was telling us is that the foreign keys could not link because the tables we were trying join didn't have a 'Unique constraint" in the adjoining columns. 
+(The rule is a foreign key must reference columns that either are a primary key or form a unique constraint.)
+
+As a result of all of the errors, we tried creating composite keys and modifying the columns yet again. once the joins were successful, we merged the data we needed and created a new table called nba info.
+[show image of the code]
+Here is what our successful sql code looked like for joins. you can see in the code we joined with the same foreign keys as the ERD.
+And here is what the nba_info table looked like once we exported it.
+[show image of nba_info table] as you can see, there is a lot of data here, There are actually more than 500k lines of data in this table.
+We could have pulled all of the tables directly from pgadmin using pandas, but with multiple people working on this project, we decided it would be easier to export the new table into a .csv file. so it could be more accessible for everyone without creating a Postgres database for each member. 
+
+With the new table created, we were finally ready to dive into the machine learning portion of this project...

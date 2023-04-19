@@ -2,6 +2,6 @@
 # Ignore some files.
 
 data_review.ipynb
-
+clean_rank.ipynb
 .DS_Store
 
