@@ -11,8 +11,18 @@ Since the project started around the end of the NCAA men’s basketball final fo
 
 HYPOTHESIS
 Our null hypothesis is “Using only game stats of each NBA player, it is not possible to determine the Most Valuable Player (MVP).  Our alternative hypothesis is with Machine Learning, the Most Valuable Player (MVP) of the NBA can be predicted using the game stats of each player over the course of the regular season.”  In addition, our goal was to see if we could do it at a different point of the season such as the, trade deadline in February.  
-DATA gathering
+
+Data gathering
 Google, Kaggle, NBA Stuffer, and ESPN, were the primary places we looked for data.  We wanted as much information as possible and started what we considered the “modern NBA” which was the 1980-1981 season.   We were able to find 5 data sets which contained all the data we thought we would need.
+
+Tools used
+We used: 
+1.  pgAdmin for our database using SQL coding.  
+2.  Discord for our team communication and meetings.
+3.  VS Studio code and python code to clean up our data and for the machine learning.
+4.  Tableau for our presentation and data visualization.  
+5.  GitHub for our repository. 
+
 
 ### Week 1
 The first Deliverable of the Final Challenge is straightforward. The goal was to decide on a question, find a dataset that would allow us to answer it effectively, and begin manipulation and prototype modeling of that set. 
